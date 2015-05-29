@@ -14,7 +14,7 @@ public class JDSActivityViewController: UIActivityViewController {
     private var linkView: UIView!
     private var linkLabel: UILabel!
 
-    var link: NSURL? = nil
+    public var link: NSURL? = nil
 
     override public func viewDidLoad() {
         super.viewDidLoad()
