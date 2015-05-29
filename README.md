@@ -14,7 +14,7 @@ Tweetbot and Tumblr's usage of this customization.
 
 ### Cocoapods
 
-`pod 'JDSActivityViewController'`
+`pod 'JDSActivityVC'`
 
 ### Carthage
 
@@ -23,6 +23,8 @@ Tweetbot and Tumblr's usage of this customization.
 ## Usage
 
 ```swift
+import JDSActivityVC
+
 /* Inside of a UIViewController */
 let imageURL = NSURL(string: "http://i.imgur.com/aJYZ20v.gif")!
 
