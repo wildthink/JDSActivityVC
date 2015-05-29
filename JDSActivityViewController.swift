@@ -1,6 +1,6 @@
 import UIKit
 
-class JDSActivityViewController: UIActivityViewController {
+public class JDSActivityViewController: UIActivityViewController {
 
     private let defaultMargin: CGFloat = 16
     private let maxURLHeight: CGFloat = 100
