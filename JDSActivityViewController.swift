@@ -16,7 +16,7 @@ public class JDSActivityViewController: UIActivityViewController {
 
     var link: NSURL? = nil
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         if let url = link {
@@ -44,7 +44,7 @@ public class JDSActivityViewController: UIActivityViewController {
         }
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
         if let _ = link {
@@ -55,7 +55,7 @@ public class JDSActivityViewController: UIActivityViewController {
         }
     }
 
-    override func viewWillDisappear(animated: Bool) {
+    override public func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
 
         if let _ = link {
