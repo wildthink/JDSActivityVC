@@ -1,7 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "JDSActivityViewController"
-  s.version      = "0.1"
-  s.summary      = "JDSActivityViewController is a small UIActivityViewController subclass which can be configured to display a URL to be shared. This was inspired by Tweetbot and Tumblr's usage of this paradigm."
+  s.version      = "0.2"
+  s.summary      = "JDSActivityViewController is a lightweight UIActivityViewController subclass,
+  which can be configured to display a URL to be shared. This was inspired by
+  Tweetbot and Tumblr's usage of this customization."
   s.homepage     = "https://github.com/Jasdev/JDSActivityViewController"
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
