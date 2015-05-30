@@ -12,7 +12,6 @@ public class JDSActivityViewController: UIActivityViewController {
     private let linkBlue = UIColor(red: 0.05, green: 0.39, blue: 1.0, alpha: 1.0)
 
     private var linkView: UIView!
-    private var linkLabel: UILabel!
 
     public var link: NSURL? = nil
 
@@ -25,23 +24,22 @@ public class JDSActivityViewController: UIActivityViewController {
             linkView.layer.cornerRadius = 3
             linkView.alpha = 0
 
-            linkLabel = UILabel()
+            let linkLabel = UILabel()
             linkLabel.textAlignment = .Center
             linkLabel.textColor = linkBlue
             linkLabel.numberOfLines = 4
             linkLabel.text = url.absoluteString
             linkLabel.font = linkLabel.font.fontWithSize(15)
-            linkLabel.alpha = 0
 
             let finalLinkSize = linkLabel.sizeThatFits(CGSize(width: view.frame.width - defaultMargin - 2*linkLabelInset, height: maxURLHeight))
 
-            linkLabel.frame = CGRect(x: linkLabelInset, y: -(linkViewBottomSpace + linkLabelInset + finalLinkSize.height), width: view.frame.width - defaultMargin - 2*linkLabelInset, height: finalLinkSize.height)
-            linkView.frame = CGRectInset(linkLabel.frame, -linkLabelInset, -linkLabelInset)
-            linkLabel.center = linkView.center
+            linkView.frame = CGRect(x: 0, y: -(linkViewBottomSpace + finalLinkSize.height + 2*linkLabelInset), width: view.frame.width - defaultMargin, height: finalLinkSize.height + 2*linkLabelInset)
+            linkLabel.frame = CGRectInset(linkView.bounds, linkLabelInset, linkLabelInset)
 
+            linkView.addSubview(linkLabel)
             view.addSubview(linkView)
-            view.addSubview(linkLabel)
         }
+
     }
 
     override public func viewDidAppear(animated: Bool) {
@@ -49,8 +47,7 @@ public class JDSActivityViewController: UIActivityViewController {
 
         if let _ = link {
             UIView.animateWithDuration(animationDuration, animations: { [unowned self] () -> Void in
-                self.linkView.alpha = 1
-                self.linkLabel.alpha = 1
+                self.linkView.alpha = 0.9
             })
         }
     }
@@ -61,7 +58,6 @@ public class JDSActivityViewController: UIActivityViewController {
         if let _ = link {
             UIView.animateWithDuration(animationDuration, animations: { [unowned self] () -> Void in
                 self.linkView.alpha = 0
-                self.linkLabel.alpha = 0
             })
         }
     }
