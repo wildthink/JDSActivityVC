@@ -16,10 +16,6 @@ Tweetbot and Tumblr's usage of this customization.
 
 `pod 'JDSActivityVC'`
 
-### Carthage
-
-*soon*
-
 ## Usage
 
 ```swift
