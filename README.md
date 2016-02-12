@@ -12,7 +12,7 @@ Tweetbot and Tumblr's usage of this customization.
 
 ## Installation
 
-### Cocoapods
+### CocoaPods
 
 `pod 'JDSActivityVC'`
 
